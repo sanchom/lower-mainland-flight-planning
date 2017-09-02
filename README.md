@@ -15,12 +15,8 @@ planning information for the BC Lower Mainland.
 
 You should see something like this:
 
-> [WARN] No ENV file found
-
-> 17:12:00 web.1   |  [2017-09-01 18:12:00 +0000] [7874] [INFO] Starting gunicorn 19.7.1
-
-> 17:12:00 web.1   |  [2017-09-01 18:12:00 +0000] [7874] [INFO] Listening at: http://0.0.0.0:5000 (7874)
-
-> 17:12:00 web.1   |  [2017-09-01 18:12:00 +0000] [7874] [INFO] Using worker: sync
-
-> 17:12:00 web.1   |  [2017-09-01 18:12:00 +0000] [7879] [INFO] Booting worker with pid: 7879
+    [WARN] No ENV file found
+    17:12:00 web.1   |  [2017-09-01 18:12:00 +0000] [7874] [INFO] Starting gunicorn 19.7.1
+    17:12:00 web.1   |  [2017-09-01 18:12:00 +0000] [7874] [INFO] Listening at: http://0.0.0.0:5000 (7874)
+    17:12:00 web.1   |  [2017-09-01 18:12:00 +0000] [7874] [INFO] Using worker: sync
+    17:12:00 web.1   |  [2017-09-01 18:12:00 +0000] [7879] [INFO] Booting worker with pid: 7879
