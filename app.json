@@ -1,7 +1,0 @@
-{
-    "name": "Lower Mainland Flight Planning",
-    "description": "Flight planning information for the BC lower mainland.",
-    "image": "heroku/python",
-    "repository": "https://github.com/sanchom/lower-mainland-flight-planning",
-    "keywords": ["python", "django" ],
-}
