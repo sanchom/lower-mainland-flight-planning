@@ -1,10 +1,15 @@
 from flask import Flask
 from datetime import datetime
+
+import navcanada
+
 app = Flask(__name__)
 
 @app.route('/')
 def homepage():
     the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
+
+    metars = navcanada.get_metars()
 
     return """
     <h1>Hello heroku. Testing the auto deployment.</h1>
