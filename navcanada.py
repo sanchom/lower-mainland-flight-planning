@@ -1,7 +1,7 @@
 """Fetches flight planning information from navcanada.
 """
 
-import urllib2
+from six.moves import urllib
 
 def get_metars():
     """Gets the METARs and TAFs from NavCanada.
@@ -12,8 +12,7 @@ def get_metars():
                (having a list of strings as the value)
     """
     metar_uri = "https://flightplanning.navcanada.ca/cgi-bin/route.cgi?Langue=anglais&Depart=CYVR&Destination=CYXX&cw_metar=raw_metar#METAR/TAF"
-    request = urllib2.Request(metar_uri)
-    response = urllib2.urlopen(request)
+    response = urllib.request.urlopen(metar_uri)
     page = response.read()
 
     # TODO: extract the station identifiers, TAFs, METARs, and
