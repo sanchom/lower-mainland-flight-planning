@@ -10,7 +10,7 @@ def get_metar_page():
 
     metar_uri = "https://flightplanning.navcanada.ca/cgi-bin/route.cgi?Langue=anglais&Depart=CYVR&Destination=CYXX&cw_metar=raw_metar"
     response = urllib.request.urlopen(metar_uri)
-    page = response.read()
+    page = response.read().decode('latin-1').encode('utf-8')
 
     return page
 
