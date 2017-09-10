@@ -42,6 +42,11 @@ body {
 img {
     margin: 0.5em;
 }
+.footer {
+text-align: center;
+font-size: 70%;
+margin-top: 5em;
+}
     </style>
   </head>
   <body>
@@ -58,6 +63,7 @@ img {
         # Splitting the TAF for display at every 'FM' element.
         formatted_taf = re.sub(' FM', ' <br />FM', data['TAF'])
         result_page = result_page + '<p>{}</p>\n'.format(formatted_taf)
+    result_page = result_page + '<div class="footer"><p><a href="https://github.com/sanchom/lower-mainland-flight-planning">github.com/sanchom/lower-mainland-flight-planning</a></p></div>'
     result_page = result_page + '</body>\n</html>'
 
     return result_page

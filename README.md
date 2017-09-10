@@ -3,6 +3,10 @@
 A Heroku app using Python that serves a simple webpage with flight
 planning information for the BC Lower Mainland.
 
+# Providing feedback
+
+Send suggestions, feature requests, bugs by filling out an issue (there's a tab up above).
+
 # Setup for local development
 
 * [Install heroku command line interface](https://devcenter.heroku.com/articles/getting-started-with-python#set-up)
