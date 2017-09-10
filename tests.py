@@ -25,6 +25,17 @@ class TestMetarParser(unittest.TestCase):
                         is_speci = True
             self.assertTrue(is_speci)
 
+    def test_extracts_lwiss(self):
+        with io.open('test_data/metars_and_tafs.html', 'r', encoding='latin-1') as f:
+            page = f.read()
+            result = navcanada.parse_metars_and_tafs(page)
+            is_lwis = False
+            for station, data in iteritems(result):
+                for m in data['METARS']:
+                    if m.count('LWIS'):
+                        is_lwis = True
+            self.assertTrue(is_lwis)
+
     def test_extracts_tafs(self):
         with io.open('test_data/metars_and_tafs.html', 'r', encoding='latin-1') as f:
             page = f.read()

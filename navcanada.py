@@ -22,14 +22,14 @@ def parse_metars_and_tafs(page):
                (having a single string as the value), and 'METARS'
                (having a list of strings as the value)
     """
-    metars = re.findall('(?:METAR|SPECI) [A-Z]{4}.*?=', page, flags=re.DOTALL)
+    metars = re.findall('(?:METAR|SPECI|LWIS) [A-Z]{4}.*?=', page, flags=re.DOTALL)
     tafs = re.findall('(?:TAF|TAF AMD) [A-Z]{4}.*?=', page, flags=re.DOTALL)
     metars = [re.sub('\s{2,}', ' ', re.sub('(?:<br>|\\n)', '', metar)) for metar in metars]
     tafs = [re.sub('\s{2,}', ' ', re.sub('(?:<br>|\\n)', '', taf)) for taf in tafs]
 
     return_structure = {}
     for metar in metars:
-        m = re.match('^(?:METAR|SPECI) ([A-Z]{4}).*?=$', metar)
+        m = re.match('^(?:METAR|SPECI|LWIS) ([A-Z]{4}).*?=$', metar)
         station = m.group(1)
         try:
             return_structure[station]['METARS'].append(metar)
