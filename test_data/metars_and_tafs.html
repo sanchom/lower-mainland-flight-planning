@@ -1,0 +1,376 @@
+<html><!-- InstanceBegin template="/Templates/banniere-brief-e.dwt" codeOutsideHTMLIsLocked="false" -->
+<HEAD><BASE HREF="https://flightplanning.navcanada.ca/awws/html/anglais/">
+<title> AWWS Route Data: (CYVR -> CYXX) </title>
+<!-- #BeginEditable "doctitle" -->
+<link rel="stylesheet" href="../../styles/awws.css" type="text/css">
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../../styles/awws.css" type="text/css">
+<script language="JavaScript" src="js/clock.js">
+</script>
+<script language="JavaScript" src="js/CreePage.js">
+</script>
+<script language="JavaScript">
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+function MM_callJS(jsStr) { //v2.0
+  return eval(jsStr)
+}
+</script>
+<!--Insérer dans la region éditable nommee HeadVariable les JavaScripts qui sont utilises par les pages individuelles. -->
+<!-- #BeginEditable "HeadVariable" --><!-- #EndEditable --><!-- InstanceParam name="onloadVal" type="text" value="doTime()" -->
+
+</head>
+<body bgcolor="#ffffff" leftmargin="2" topmargin="0" marginwidth="2" marginheight="0" onLoad="ol_done=1;putFocus();doTime()" onpageshow="if (!ol_done){window.onload();};ol_done=0;">
+<img src="../../images/bannieres/banniere-meteo-e.jpg" name="Banniere" width="755" usemap="#BannerMeteoMap" border="0" height="98">
+<map name="BannerMeteoMap">
+  <area shape="rect" coords="79,0,257,32" href="http://www.navcanada.ca" alt="To NAV CANADA Home Page" title="To NAV CANADA Home Page">
+  <area shape="rect" coords="378,0,436,32" href="javascript:GenerDoc('login','anglais','html')" alt="Login to a new session" title="Login to a new session">
+  <area shape="rect" coords="436,0,487,32" href="javascript:GenerDoc('search','anglais','html')" alt="Search on AWWS site" title="Search on AWWS site">
+  <area shape="rect" coords="487,0,550,32" href="javascript:GenerDoc('feedback','anglais','html')" alt="Feedback and Comments" title="Feedback and Comments">
+  <area shape="rect" coords="550,0,618,32" href="http://www.navcanada.ca/en/pages/terms-of-use.aspx" alt="Disclaimer" title="Disclaimer">
+  <area shape="rect" coords="618,0,675,32" href="javascript:GenerDoc(document.LangueAstuce.NomPage.value,'francais','html')" alt="Vers la page fran&ccedil;aise &eacute;quivalente" title="Vers la page fran&ccedil;aise &eacute;quivalente">
+  <area shape="rect" coords="675,0,709,32" href="javascript:GenerDoc(document.LangueAstuce.Astuce.value,'anglais','tips')" alt="Tips" title="Tips">
+  <area shape="rect" coords="709,0,764,32" href="javascript:GenerDoc('table-contents','anglais','user-guide')" alt="FAQ" title="FAQ">
+  <area shape="rect" coords="125,44,218,76" href="javascript:GenerDoc('what-new','anglais','html')" alt="What's new on the site" title="What's new on the site">
+  <area shape="rect" coords="218,44,339,76" href="javascript:GenerDoc('forecast-observation','anglais','html')" alt="To the Forecasts and Observations / NOTAM section" title="To the Forecasts and Observations / NOTAM section">
+  <area shape="rect" coords="339,44,455,76" href="https://plan.navcanada.ca" alt="To &quot;File a Flight Plan&quot; website" title="To &quot;File a Flight Plan&quot; website">
+  <area shape="rect" coords="455,44,545,76" href="javascript:GenerDoc('table-contents','anglais','user-guide')" alt="Publications and other links" title="Publications and other links">
+  <area shape="rect" coords="545,44,641,76" href="javascript:verifierNoSession('UpdProfile')" alt="Update of the User's profile" title="Update of the User's profile">
+  <area shape="rect" coords="641,44,734,76" href="http://www.navcanada.ca/NavCanada.asp?Language=en&Content=ContentDefinitionFiles%5CcontactUs%5Cdefault.xml" alt="FIC Telephone Numbers" title="FIC Telephone Numbers">
+  <area shape="rect" coords="0,75,130,96" href="javascript:verifierNoSession('MyWxData')" alt="My Weather Data Folder" title="My Weather Data Folder">
+  <area shape="rect" coords="130,76,214,97" href="javascript:GenerDoc('rb','anglais','html')" alt="Route Weather Data" title="Route Weather Data">
+  <area shape="rect" coords="214,75,336,97" href="javascript:GenerDoc('rab','anglais','html')" alt="Regional Weather Data" title="Regional Weather Data">
+  <area shape="rect" coords="336,75,432,97" href="javascript:GenerDoc('lab','anglais','html')" alt="Local Weather Data" title="Local Weather Data">
+  <area shape="rect" coords="432,75,591,97" href="javascript:GenerDoc('forecast-observation','anglais','html')" alt="To the Forecasts and Observations / NOTAM section" title="To the Forecasts and Observations / NOTAM section">
+</map>
+<div align="left">
+<iframe src="https://plan.navcanada.ca/awws/notices/banner/en" width="756" height="30" frameborder="0" scrolling="auto" marginwidth="0" marginheight="0">
+  <p>Your browser does not support iframe, click here to view <a href="https://plan.navcanada.ca/awws/notices/banner/en">AWWS News</a>.</p>
+</iframe>
+</div>
+<form name="CreePage" method="get" action="/cgi-bin/CreePage.pl">
+  <input type="hidden" name="Langue" value="anglais">
+  <input type="hidden" name="NoSession"  value="NS_Inconnu">
+  <input type="hidden" name="Page">
+  <input type="hidden" name="TypeDoc" value="html">
+  <!-- InstanceBeginEditable name="CreePage_Form" --><!-- InstanceEndEditable -->
+</form>
+<!-- #BeginEditable "LangueAstuceForme" -->
+<form name="LangueAstuce" method="get" action="/cgi-bin/CreePage.pl">
+  <input type="hidden" name="Astuce" value="PasAstuce">
+  <input type="hidden" name="NomPage" value="NonAutreLangue">
+</form>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+<td>
+<span class="corps">Request Generated <font face="arial" color="red"><b> 09/10/2017 at 01:26:52 UTC </b></font>. Weather information available at that time is displayed.</span><br><br>
+</td>
+</tr>
+</table>
+<IMG src="/cgi-bin/routemap.cgi?Depart=CYVR&Destination=CYXX">
+<!-- #EndEditable --> <!-- #BeginEditable "contenu" -->
+ 
+<br><!-- #BeginLibraryItem "/library/produit-e.lbi" --> <table width="756" border="0" cellspacing="0" cellpadding="0"> 
+ 
+  <tr> 
+ 
+    <td> 
+ 
+      <div align="left"> 
+ 
+        <script language="JavaScript" src="js/divers.js">
+ 
+</script> 
+ 
+    </td> 
+ 
+    <td> 
+ 
+      <div align="right"> 
+ 
+        <!--FIN_BOUTON_ACTIF --> 
+ 
+<form name="Produit" method="post" action="/cgi-bin/post-query">
+<input type="hidden" name="Langue" value="anglais" >
+<input type="hidden" name="Depart" value="CYVR" >
+<input type="hidden" name="Destination" value="CYXX" >
+<input type="hidden" name="cw_metar" value="raw_metar" >
+        <img name="boutsavereqI" src="../../boutons/anglais/bout-savereq-I.gif" width="156" height="35" border="0" alt="Save this request - Inactive"> 
+</form>
+        <!--FIN_BOUTON_INACTIF --> 
+ 
+      </div> 
+ 
+    </td> 
+ 
+  </tr> 
+ 
+  <tr> 
+ 
+    <td colspan="2"> 
+ 
+      <hr> 
+ 
+    </td> 
+ 
+  </tr> 
+ 
+</table>
+ 
+<div style='width:756px'>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<h4><th class="corps"> <div align="left"><a name="METAR/TAF"></a><FONT FACE="ARIAL" color="#205670"><b> METAR/TAF </b></div></FONT></th></H4></tr>
+</table>
+<H2 ALIGN=LEFT><FONT FACE="ARIAL" SIZE="2"><FONT  color="red">NANAIMO/BC</FONT></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="" target="_blank"></a></FONT></H2><p>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+METAR CYCD 100100Z 19006KT 130V230 12SM SCT012 SCT025 BKN250 15/14
+<br>
+ A3007 RMK SC3SC1CI3 SLP184=
+<br>
+
+</div>
+</b></font>
+</tr>
+</table>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+SPECI CYCD 100051Z 14003KT 100V170 12SM SCT012 SCT025 BKN250 15/13
+<br>
+ A3007 RMK SC3SC1CI3 SLP184=
+<br>
+
+</div>
+<div style="text-indent:-1.5em;margin-left:1.5em">
+METAR CYCD 100000Z 06005KT 040V110 12SM BKN012 BKN020 15/14 A3006 RMK
+<br>
+ SC5SC2 SLP180=
+<br>
+
+</div>
+</b></font>
+</tr>
+</table>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+METAR CYCD 092300Z 11008KT 070V140 12SM BKN012 BKN025 15/13 A3005 RMK
+<br>
+ SC5SC2 SLP177=
+<br>
+
+</div>
+</b></font>
+</tr>
+</table>
+</p>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+TAF CYCD 092338Z 1000/1004 10007KT P6SM BKN012 OVC025 TEMPO 1000/1004
+<br>     SCT012 BKN025
+<br>    RMK NXT FCST WILL BE ISSUED AT 101445Z=
+<br>
+</div>
+</b></font>
+</tr>
+</table>
+<H2 ALIGN=LEFT><FONT FACE="ARIAL" SIZE="2"><FONT  color="red">VANCOUVER INTL/BC</FONT></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.metcam.navcanada.ca/cameraSite.jsp?lang=e&site=CYVR" target="_blank">(show WxCam)</a></FONT></H2><p>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+SPECI CYVR 100115Z 09007KT 7SM BKN009 OVC016 15/13 A3009 RMK SC5SC3
+<br>
+ SLP192=
+<br>
+
+</div>
+<div style="text-indent:-1.5em;margin-left:1.5em">
+METAR CYVR 100100Z 10007KT 7SM FEW007 OVC013 OVC024 15/13 A3009 RMK
+<br>
+ SF1SC7SC1 SC TR SLP190=
+<br>
+
+</div>
+</b></font>
+</tr>
+</table>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+SPECI CYVR 100028Z 10010KT 7SM BKN013 OVC018 15/13 A3008 RMK SC7SC1
+<br>
+ SLP186=
+<br>
+
+</div>
+<div style="text-indent:-1.5em;margin-left:1.5em">
+METAR CYVR 100000Z 09009KT 10SM OVC009 OVC018 15/13 A3008 RMK SC8SC1
+<br>
+ SC TR SLP187=
+<br>
+
+</div>
+</b></font>
+</tr>
+</table>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+SPECI CYVR 092333Z 09007KT 8SM OVC009 OVC019 15/13 A3007 RMK SC8SC1
+<br>
+ SC TR SLP185=
+<br>
+
+</div>
+<div style="text-indent:-1.5em;margin-left:1.5em">
+SPECI CYVR 092313Z CCA 10009KT 8SM BKN011 OVC029 15/13 A3006 RMK
+<br>
+ SC7SC1 SLP182=
+<br>
+
+</div>
+<div style="text-indent:-1.5em;margin-left:1.5em">
+SPECI CYVR 092313Z 10009KT 8SM BKN011 OVC029 15/13 A3006 RMK SC7SC1
+<br>
+ CIG VRB 11-15 SLP182=
+<br>
+
+</div>
+<div style="text-indent:-1.5em;margin-left:1.5em">
+METAR CYVR 092300Z 09011KT 8SM BKN015 OVC029 15/13 A3006 RMK SC6SC2
+<br>
+ PCPN XTRMLY LGT SLP181=
+<br>
+
+</div>
+</b></font>
+</tr>
+</table>
+</p>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+TAF AMD CYVR 100008Z 1000/1106 09008KT P6SM SCT012 OVC025 TEMPO
+<br>     1000/1015 BKN008 OVC020
+<br>    FM101500 10008KT P6SM BKN025
+<br>    FM102100 16008KT P6SM FEW030 SCT060
+<br>    RMK NXT FCST BY 100300Z=
+<br>
+</div>
+</b></font>
+</tr>
+</table>
+<H2 ALIGN=LEFT><FONT FACE="ARIAL" SIZE="2"><FONT  color="red">ABBOTSFORD/BC</FONT></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="" target="_blank"></a></FONT></H2><p>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+METAR CYXX 100100Z 02005KT 300V040 10SM -RA FEW015 BKN025 OVC040
+<br>
+ 14/13 A3009 RMK SF2SC3SC3 SLP192=
+<br>
+
+</div>
+</b></font>
+</tr>
+</table>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+METAR CYXX 100000Z 00000KT 8SM -RA FEW015 SCT030 OVC045 14/13 A3008
+<br>
+ RMK SF1SC2SC5 SLP188=
+<br>
+
+</div>
+</b></font>
+</tr>
+</table>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+SPECI CYXX 092353Z 00000KT 8SM -RA FEW015 BKN030 OVC045 14/13 A3008
+<br>
+ RMK SF2SC4SC2 SLP187=
+<br>
+
+</div>
+<div style="text-indent:-1.5em;margin-left:1.5em">
+SPECI CYXX 092327Z 26003KT 200V290 2 1/2SM -RA BR FEW010 BKN015
+<br>
+ OVC030 14/13 A3008 RMK SF2SC4SC2 SLP187=
+<br>
+
+</div>
+<div style="text-indent:-1.5em;margin-left:1.5em">
+METAR CYXX 092300Z VRB02KT 2 1/2SM -RA BR SCT017 BKN025 OVC030 14/13
+<br>
+ A3007 RMK SC4SC2SC2 SLP184=
+<br>
+
+</div>
+</b></font>
+</tr>
+</table>
+</p>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<FONT FACE="ARIAL" SIZE="2"><b><div style="text-indent:-1.5em;margin-left:1.5em">
+TAF CYXX 092338Z 1000/1024 VRB03KT P6SM -RA FEW008 SCT015 OVC040
+<br>     TEMPO 1000/1002 2SM RA BR BKN008 OVC015
+<br>    FM100200 VRB03KT P6SM BKN015 OVC030 TEMPO 1002/1014 SCT015 BKN030
+<br>    FM101400 19005KT P6SM FEW020 BKN040
+<br>    RMK NXT FCST BY 100600Z=
+<br>
+</div>
+</b></font>
+</tr>
+</table>
+<table width="756" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<br><hr align="left" width="756">
+</tr>
+</table>
+</div>
+<form name="Horloge" >
+  <table cellspacing="0" cellpadding="0" width="756" bgcolor="#205670">
+    <tr >
+      <td height="34"><font color="#FFFFCC" size="-2">Your
+          time </font><font color="#FFFFCC" size="-1">
+        <input name="HreLocale" value="Not available">
+        </font></td>
+      <td height="34"><font color="#FFFFCC" size="-2">UTC
+          time</font><font color="#FFFFCC" size="-1">
+        <input name="HreUTC" value="Not available">
+        </font></td>
+      <td nowrap height="34" width="100">
+        <div align="center"><font size="-2" color="#FFFFCC">
+          <input type="button" name="Clock Disclaimer" value="Clock Disclaimer" onClick="MM_popupMsg('Reliable clock times are dependant on two sources:\r1. Your computer`s time\r2. Your computer`s time zone settings\rPlease verify that both these settings are correct before relying on the clock.')">
+          </font></div>
+      </td>
+      <td height="34"  colspan="4" width="67" nowrap>
+        <div align="center"><font color="#FFFFCC" size="-2"> </font></div>
+        <div align="center"><font size="+1"><a href="javascript:seLogger()"><font color="#FFFFCC" size="-1">Log
+                out</font></a></font></div>
+      </td>
+    </tr>
+  </table>
+  <table width="756" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>
+        <div align="left"><font size="-1">Weather
+            data provided by Environment Canada and NAV CANADA</font> </div>
+      </td>
+      <td>
+        <div align="left"><img src="../../images/bannieres/ec-logo-e.gif" width="221" height="20"></div>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+<!-- InstanceEnd --></html>
