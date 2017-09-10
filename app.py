@@ -1,7 +1,9 @@
-from flask import Flask
-from datetime import datetime
+import re
 
-import navcanada
+from flask import Flask
+from six import iteritems
+
+from navcanada import parse_metars_and_tafs, get_metar_page
 
 app = Flask(__name__)
 
@@ -9,13 +11,18 @@ app = Flask(__name__)
 def homepage():
     the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
-    metars = navcanada.get_metars()
+    metars_and_tafs = parse_metars_and_tafs(get_metar_page())
 
-    return """
-    <h1>Hello heroku. Testing the auto deployment.</h1>
-    <p>It is currently {time}.</p>
-    <img src="http://loremflickr.com/600/400" />
-    """.format(time=the_time)
+    result_page = ''
+    for station, data in iteritems(metars_and_tafs):
+        result_page = result_page + '<h1>{}</h1>\n'.format(station)
+        for metar in data['METARS']:
+            result_page = result_page + '<p>{}</p>\n'.format(metar)
+        # Splitting the TAF for display at every 'FM' element.
+        formatted_taf = re.sub(' FM', ' <br />FM', data['TAF'])
+        result_page = result_page + '<p>{}</p>\n'.format(formatted_taf)
+
+    return result_page
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
