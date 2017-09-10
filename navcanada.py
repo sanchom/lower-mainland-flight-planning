@@ -22,9 +22,6 @@ def parse_metars_and_tafs(page):
                (having a single string as the value), and 'METARS'
                (having a list of strings as the value)
     """
-    # TODO: extract the station identifiers, TAFs, METARs, and
-    # construct the response. Look at the 're' package.
-
     metars = re.findall('(?:METAR|SPECI) [A-Z]{4}.*?=', page, flags=re.DOTALL)
     tafs = re.findall('(?:TAF|TAF AMD) [A-Z]{4}.*?=', page, flags=re.DOTALL)
     metars = [re.sub('\s{2,}', ' ', re.sub('(?:<br>|\\n)', '', metar)) for metar in metars]

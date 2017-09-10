@@ -9,8 +9,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
-
     metars_and_tafs = parse_metars_and_tafs(get_metar_page())
 
     result_page = ''
