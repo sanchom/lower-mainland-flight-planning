@@ -55,17 +55,28 @@ th {
     flex-wrap: wrap;
     justify-content: center;
 }
+.pre {
+    white-space: pre;
+}
 img {
     margin: 0.5em;
 }
 .footer {
+margin-left: 20%;
+margin-right: 20%;
 text-align: center;
 font-size: 70%;
 margin-top: 5em;
 }
+.header {
+text-align: center;
+font-size: 70%;
+margin-bottom: 3em;
+}
     </style>
   </head>
   <body>
+<div class="header"><p><a href="#disclaimer">Disclaimer</a></p></div>
 <div class="gfa-container">
 <a href="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_000.png" target="blank_"><img class="gfa" src="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_000.png" /></a>
 <a href="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_006.png" target="blank_"><img class="gfa" src="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_006.png" /></a>
@@ -80,7 +91,7 @@ margin-top: 5em;
         formatted_taf = re.sub(' FM', ' <br />FM', data['TAF'])
         result_page = result_page + '<p>{}</p>\n'.format(formatted_taf)
     result_page = result_page + '<h1>Supplemental information</h1\n'
-    result_page = result_page + '<p>Lower mainland ATIS: 1-877-517-2847</p>\n'
+    result_page = result_page + '<p>Lower mainland ATIS: <a href="tel:1-877-517-2847">1-877-517-2847</a></p>\n'
     result_page = result_page + '<p><a href="http://atm.navcanada.ca/atm/iwv/CZBB">CZBB (Boundary Bay) current winds</a></p>\n'
     for station, winds in iteritems(upper_winds):
         result_page = result_page + '<h1>Upper winds (Vancouver)</h1>\n'
@@ -91,12 +102,12 @@ margin-top: 5em;
         result_page = result_page + '</table>\n'
 
     result_page = result_page + '<h1>NOTAMs</h1>\n'
-    result_page = result_page + '<pre>\n'
+    result_page = result_page + '<div class="pre">\n'
     for notam in notams:
         result_page = result_page + notam + '\n'
-    result_page = result_page + '</pre>\n'
+    result_page = result_page + '</div>\n'
 
-    result_page = result_page + '<div class="footer"><p>Code, feedback: <a href="https://github.com/sanchom/lower-mainland-flight-planning">github.com/sanchom/lower-mainland-flight-planning</a></p></div>\n'
+    result_page = result_page + '<div class="footer"><a name="disclaimer" /><p>This page is a good-faith attempt to reproduce a selection of flight planning information from <a href="http://flightplanning.navcanada.ca">flightplanning.navcanada.ca</a> that I find generally useful for VFR flying in the area. I don\'t guarantee its accuracy, completeness, relevance, or currency.</p><p>Code, feedback: <a href="https://github.com/sanchom/lower-mainland-flight-planning">github.com/sanchom/lower-mainland-flight-planning</a></p></div>\n'
 
     result_page = result_page + '</body>\n</html>'
 
