@@ -29,9 +29,9 @@ def homepage():
 @media all {html body table {font-size: 18px;} .gfa {width: 500px;} .footer {margin-left: 10%; margin-right: 10%; } }
 @media all and (max-width:800px){html body table {font-size: 18px;} .gfa {width: 500px;} }
 @media all and (max-width:720px){html body table {font-size: 17px;} .gfa {width: 500px;} }
-@media all and (max-width:640px){html body table {font-size: 16px;} .gfa {width: 500px;} .footer {margin-left: 0%; margin-right: 0%; } }
-@media all and (max-width:560px){html body table {font-size: 15px;} .gfa {width: 448px;} }
-@media all and (max-width:480px){html body table {font-size: 14px;} .gfa {width: 384px;} }
+@media all and (max-width:640px){html body table {font-size: 16px;} .gfa {width: 100%;} .footer {margin-left: 0%; margin-right: 0%; } }
+@media all and (max-width:560px){html body table {font-size: 15px;} .gfa {width: 100%;} }
+@media all and (max-width:480px){html body table {font-size: 14px;} .gfa {width: 100%;} }
 
 body {
     margin-top: 5em;
