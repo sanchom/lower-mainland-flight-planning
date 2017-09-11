@@ -24,6 +24,16 @@ def get_upper_winds_page():
 
     return page
 
+def get_notams_page():
+    """Gets the NOTAMs from navcanada.ca
+    """
+
+    notam_uri = "https://flightplanning.navcanada.ca/cgi-bin/Fore-obs/notam.cgi?Langue=anglais&TypeBrief=N&Stations=CZBB%20CYVR%20CYPK%20CYNJ%20CYXX&ni_File=File&ni_FIR=fir&ni_HQ=cyhq"
+    response = urllib.request.urlopen(notam_uri)
+    page = response.read().decode('latin-1')
+
+    return page
+
 def parse_metars_and_tafs(page):
     """Extracts the METARs and TAFs from the page.
 
@@ -78,3 +88,7 @@ def parse_upper_winds(page):
         row['18000'] = winds[4]
         results['YVR'].append(row)
     return results
+
+def parse_notams(page):
+    notam_match = re.findall('([0-9]{6} C[0-9A-Z]{3}.*?)</pre>', page, flags=re.DOTALL)
+    return notam_match

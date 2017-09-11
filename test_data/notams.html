@@ -1,0 +1,996 @@
+<html><!-- InstanceBegin template="/Templates/banniere-brief-e.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<BASE HREF="https://flightplanning.navcanada.ca:443/awws/html/anglais/"><!-- #BeginEditable "doctitle" -->
+<title>AWWS - NOTAM</title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../../styles/awws.css" type="text/css">
+<script language="JavaScript" src="js/clock.js">
+</script>
+<script language="JavaScript" src="js/CreePage.js">
+</script>
+<script language="JavaScript" src="js/notam_print.js">
+</script>
+<script language="JavaScript">
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+function MM_callJS(jsStr) { //v2.0
+  return eval(jsStr)
+}
+</script>
+
+<style>
+
+@media print
+{
+.noprint, .printcheckbox, .printbutton, .printtext
+	{
+	display:none;
+	}
+.print
+	{
+	display:block;
+	}
+}
+
+</style>
+
+
+<!--Insérer dans la region éditable nommee HeadVariable les JavaScripts qui sont utilises par les pages individuelles. -->
+<!-- #BeginEditable "HeadVariable" --><!-- #EndEditable --><!-- InstanceParam name="onloadVal" type="text" value="doTime()" -->
+</head>
+<body bgcolor="#ffffff" leftmargin="2" topmargin="0" marginwidth="2" marginheight="0" onLoad="ol_done=1;putFocus();doTime()" onpageshow="if (!ol_done){window.onload();};ol_done=0;">
+<img src="../../images/bannieres/banniere-meteo-e.jpg" name="Banniere" width="755" usemap="#BannerMeteoMap" border="0" height="98">
+<map name="BannerMeteoMap">
+  <area shape="rect" coords="79,0,257,32" href="http://www.navcanada.ca" alt="To NAV CANADA Home Page" title="To NAV CANADA Home Page">
+  <area shape="rect" coords="378,0,436,32" href="javascript:GenerDoc('login','anglais','html')" alt="Login to a new session" title="Login to a new session">
+  <area shape="rect" coords="436,0,487,32" href="javascript:GenerDoc('search','anglais','html')" alt="Search on AWWS site" title="Search on AWWS site">
+  <area shape="rect" coords="487,0,550,32" href="javascript:GenerDoc('feedback','anglais','html')" alt="Feedback and Comments" title="Feedback and Comments">
+  <area shape="rect" coords="550,0,618,32" href="http://www.navcanada.ca/en/pages/terms-of-use.aspx" alt="Disclaimer" title="Disclaimer">
+  <area shape="rect" coords="618,0,675,32" href="javascript:GenerDoc(document.LangueAstuce.NomPage.value,'francais','html')" alt="Vers la page fran&ccedil;aise &eacute;quivalente" title="Vers la page fran&ccedil;aise &eacute;quivalente">
+  <area shape="rect" coords="675,0,709,32" href="javascript:GenerDoc(document.LangueAstuce.Astuce.value,'anglais','tips')" alt="Tips" title="Tips">
+  <area shape="rect" coords="709,0,764,32" href="javascript:GenerDoc('table-contents','anglais','user-guide')" alt="FAQ" title="FAQ">
+  <area shape="rect" coords="125,44,218,76" href="javascript:GenerDoc('what-new','anglais','html')" alt="What's new on the site" title="What's new on the site">
+  <area shape="rect" coords="218,44,339,76" href="javascript:GenerDoc('forecast-observation','anglais','html')" alt="To the Forecasts and Observations / NOTAM section" title="To the Forecasts and Observations / NOTAM section">
+  <area shape="rect" coords="339,44,455,76" href="https://plan.navcanada.ca" alt="To &quot;File a Flight Plan&quot; website" title="To &quot;File a Flight Plan&quot; website">
+  <area shape="rect" coords="455,44,545,76" href="javascript:GenerDoc('table-contents','anglais','user-guide')" alt="Publications and other links" title="Publications and other links">
+  <area shape="rect" coords="545,44,641,76" href="javascript:verifierNoSession('UpdProfile')" alt="Update of the User's profile" title="Update of the User's profile">
+  <area shape="rect" coords="641,44,734,76" href="http://www.navcanada.ca/NavCanada.asp?Language=en&Content=ContentDefinitionFiles%5CcontactUs%5Cdefault.xml" alt="FIC Telephone Numbers" title="FIC Telephone Numbers">
+  <area shape="rect" coords="0,75,130,96" href="javascript:verifierNoSession('MyWxData')" alt="My Weather Data Folder" title="My Weather Data Folder">
+  <area shape="rect" coords="130,76,214,97" href="javascript:GenerDoc('rb','anglais','html')" alt="Route Weather Data" title="Route Weather Data">
+  <area shape="rect" coords="214,75,336,97" href="javascript:GenerDoc('rab','anglais','html')" alt="Regional Weather Data" title="Regional Weather Data">
+  <area shape="rect" coords="336,75,432,97" href="javascript:GenerDoc('lab','anglais','html')" alt="Local Weather Data" title="Local Weather Data">
+  <area shape="rect" coords="432,75,591,97" href="javascript:GenerDoc('forecast-observation','anglais','html')" alt="To the Forecasts and Observations / NOTAM section" title="To the Forecasts and Observations / NOTAM section">
+</map>
+<div align="left">
+<iframe src="https://plan.navcanada.ca/awws/notices/banner/en" width="756" height="30" frameborder="0" scrolling="auto" marginwidth="0" marginheight="0">
+  <p>Your browser does not support iframe, click here to view <a href="https://plan.navcanada.ca/awws/notices/banner/en">AWWS News</a>.</p>
+</iframe>
+</div>
+<form name="CreePage" method="get" action="/cgi-bin/CreePage.pl">
+  <input type="hidden" name="Langue" value="anglais">
+  <input type="hidden" name="NoSession" value="NS_Inconnu">
+  <input type="hidden" name="Page">
+  <input type="hidden" name="TypeDoc" value="html">
+  <!-- InstanceBeginEditable name="CreePage_Form" --><!-- InstanceEndEditable -->
+</form>
+<!-- #BeginEditable "LangueAstuceForme" -->
+<form name="LangueAstuce" method="get" action="/cgi-bin/CreePage.pl">
+  <input type="hidden" name="Astuce" value="PasAstuce">
+  <input type="hidden" name="NomPage" value="NonAutreLangue">
+</form>
+<!-- #EndEditable --> <!-- #BeginEditable "contenu" -->
+
+<input type="button" class="printbutton" name="notam_print_button" value="Print NOTAM" disabled="true" onClick="notam_validate_print_options()">
+<br class="noprint"><br class="noprint">
+<span class="printtext"><i><u><b>NOTAM Printing</b></u></i><br>All NOTAM, groups of NOTAM or individual NOTAM can be printed by selecting the adjacent checkbox.</span>
+<br class="noprint"><br class="noprint">
+<div id="notam_all_whole_section" class="notam_print_section">
+  <span id="notam_print_item"><input class="printcheckbox" type="checkbox" name="" value="" onClick="(notam_set_print_options(this))">&nbsp;&nbsp;<b>Select <u>All</u> NOTAM</b></span>
+
+<br><br>
+
+<div id="notam_title_whole_section" class="notam_print_section">
+<span id="notam_print_item">
+<input class="printcheckbox" type="checkbox" name="" value="" onClick="notam_set_print_options(this)">&nbsp;&nbsp;<b>Aerodrome NOTAM file</b>
+<br><br></span>
+<div id="notam_station_whole_section" class="notam_print_section">
+
+<span id="notam_print_item"><input class="printcheckbox" type="checkbox" name="" value="" onClick="notam_set_print_options(this)">&nbsp;&nbsp;<B>CYVR</B>
+</span>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171680 CYVR VANCOUVER/BOUNDARY BAY
+  CZBB CRANE 490455N 1230113W (APRX 1250 FT BFR THR 12 AND 580 FT
+LEFT EXTENDED RCL) 85 FT AGL 90 MSL
+MON-FRI DAYLIGHT HR ONLY
+1708251400 TIL 1711242300
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171684 CYVR VANCOUVER INTL
+  CYVR TWY J NORTH OF W5 AVBL TO A380/B747-8/ANT124
+1708252047 TIL 1711252359
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171699 CYVR VANCOUVER/BOUNDARY BAY
+  CZBB AMEND PUB: MULTIPLE BUILDINGS RADIUS 165 FT
+CENTRE 490454N 1230010W (APRX 0.5 NM NNE AD) 49 FT AGL 59 MSL.
+LGTD, NOT PAINTED
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171727 CYVR VANCOUVER INTL
+  CYVR RWY 08R/26L
+ARR RVR 2600 OR LESS NOT AUTH
+DEP RVR 1200 OR LESS NOT AUTH
+1708311200 TIL 1709302359
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171729 CYVR VANCOUVER INTL
+  CYVR RCLL 08R/26L AND RTZL 08R AND 26L U/S
+1708311200 TIL 1709301300
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171731 CYVR VANCOUVER INTL
+  CYVR ILS CAT II AND III APCH RWY 08R AND RWY 26L NOT AUTH
+DUE RCLL U/S
+1708311437 TIL APRX 1709301300
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171747 CYVR PITT MEADOWS
+  CYPK RNAV(GNSS) Y RWY 08R APCH: NOT AUTH
+1709011316 TIL APRX 1712011800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171753 CYVR PITT MEADOWS
+  CYPK MOBILE CRANE RADIUS 500 FT CENTRE 491232N 1224154W
+(APRX 2702 FT BFR THR 26L AND 1400 FT LEFT EXTENDED RCL)
+92 FT AGL 108 MSL. NOT LGTD
+1500-2359 DLY
+1709021500 TIL APRX 1712021900
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171759 CYVR VANCOUVER INTL
+  CYVR IN SUPPORT OF CYVR TFC MANAGEMENT INITIATIVE ALL VFR ACFT
+DEP WITHIN VANCOUVER FIR DESTINED FOR CYVR, EXC CAM9 AND HEL TFC,
+ARE REQUIRED TO CTC VANCOUVER ACC 1-877-987-2055 WITHIN 60 MIN
+PRIOR TO DEP FOR APPROVED ARR TIME
+MON-FRI 1500-0200
+1709051500 TIL 1709160200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171763 CYVR VANCOUVER INTL
+  CYVR TWY D BTN TWY DW AND THR 26L CLSD
+1709061400 TIL 1709161400
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171764 CYVR VANCOUVER INTL
+  CYVR TKOF RWY 26L FM TWY D NOT AUTH DUE CONST
+1709061400 TIL 1709161400
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171777 CYVR VANCOUVER INTL
+  CYVR DUE TO REDUCED SYSTEM CAPACITY AND ANTICIPATED TFC DEMANDS,
+VFR ARR NOT AUTH, EXC HEL AND FLOAT PLANE TFC.
+SEP 07    2230-0100
+SEP 08-15 1300-1500
+1709072230 TIL 1709151500
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171779 CYVR VANCOUVER/BOUNDARY BAY
+  CZBB ARCAL U/S. ALL AD LGT ON: LIM  0030-0200 DLY
+                               LIL  0200-1400 DLY
+1709080030 TIL 1709270030
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171782 CYVR VANCOUVER/BOUNDARY BAY
+  CZBB RWY 12/30 MARKINGS NON-STANDARD. THR MARKED BY ORANGE CONES
+DUE CONST BFR THR 30
+1709072100 TIL 1710120901
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171783 CYVR VANCOUVER/BOUNDARY BAY
+  CZBB ALL AD LGT U/S
+1400-0030 DLY.
+1709081400 TIL 1709270030
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171785 CYVR VANCOUVER(GEN HOSP)(HELI)
+  CBK4 CRANE 491547N 1230733W (APRX 0.1 NM N AD)
+185 FT AGL 316 MSL. LGTD NOT PAINTED
+1709072247 TIL APRX 1712081900
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171788 CYVR VANCOUVER INTL
+  CYVR RWY 08R/26L CLSD
+SEP 08-09 0500-1400
+SEP 11-16 0500-1400
+SEP 18-23 0500-1400
+1709080500 TIL 1709231400
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171789 CYVR VANCOUVER INTL
+  CYVR TWY D2 AND TWY D3 CLSD DUE CONST
+1709080008 TIL 1709231400
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171790 CYVR VANCOUVER/NEW WESTMINSTER(HOSP)(HELI)
+  CNW9 MOBILE CRANE RADIUS 100 FT CENTRE 491337N 1225331W
+(APRX 0.1 NM W AD) 165 FT AGL 286 MSL. LGTD
+1709081825 TIL APRX 1712081800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171795 CYVR VANCOUVER INTL
+  CYVR RWY 13/31 CLSD
+0500-1400 DLY
+1709110500 TIL 1709161400
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171798 CYVR VANCOUVER INTL
+  CYVR ILS 08R AND 26L U/S
+1709111500 TIL 1709112000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171799 CYVR VANCOUVER/COQUITLAM FIRE AND RESCUE(HELI)
+  CFR6 PARAJUMPS ACT RADIUS 0.5 NM CENTRE 491637N 1224324W
+(APRX 3 NM E AD) SFC TO 12500 FT MSL
+1709102000 TIL 1709110300
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171800 CYVR VANCOUVER INTL
+  CYVR IN SUPPORT OF CYVR CALL FOR RELEASE PROGRAM ALL IFR ACFT DEP
+ANY AD WITHIN VANCOUVER FIR AS WELL AS KPDX, KSEA AND KBFI
+DESTINED FOR CYVR ARE REQUIRED TO CTC TWR, FSS OR FIC BTN 30 AND
+90 MIN PRIOR TO DEP FOR AN APPROVED DEP TIME.
+IFR ACFT DEP CYQQ CYBL CYPW AND CAT4 DESTINED FOR CYVR ARE
+REQUIRED TO CTC CYQQ TML 250-339-8115 BTN 30 AND 90 MIN PRIOR TO
+DEP FOR AN APPROVED DEP TIME
+1709102345 TIL 1709110300
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170809 CYVR VANCOUVER HARBOUR
+   OBST AMEND PUB: NEW TOWER 492245N 1232319W (APRX 12 NM W AD) 110 
+   FT AGL 2446 MSL. LGTD AND PAINTED
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170878 CYVR VANCOUVER INTL
+   CYVR THE FOLLOWING APPLIES TO ALL STAR PROC: WHEN A LOWER ALT IS 
+   ISSUED, PILOTS SHALL DESCEND ON THE STAR PROFILE TO THE ASSIGNED
+   ALT. CHARTED RESTRICTIONS ABV THE ASSIGNED ALT REMAIN MANDATORY. 
+   1705191720 TIL APRX 1710120901
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171165 CYVR VANCOUVER INTL
+   ZVR- SEA ISLAND NDB 368 U/S 1706290125 TIL APRX 1709292359
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171179 CYVR VANCOUVER INTL
+   CYVR NDB/DME RWY 08R APCH NOT AUTH 1706301745 TIL APRX 1709291800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171201 CYVR VANCOUVER/DELTA(SEI)(HELI)
+   CSE7 CABLE CROSSING 490933N 1225906W (APRX 2 NM NNE AD) 408 FT 
+   AGL 433 MSL, NON-STANDARD MARKING (BALL MARKERS MISSING) 
+   1707032148 TIL APRX 1709292000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171214 CYVR VANCOUVER HARBOUR
+   CYHC MOBILE CRANE RADIUS 1000 FT CENTRE 491812N 1230238W (APRX 3 
+   NM ENE AD) 365 FT AGL 380 MSL. LGTD AND PAINTED 1707052214 TIL 
+   APRX 1710052200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171254 CYVR VANCOUVER/NEW WESTMINSTER(HOSP)(HELI)
+   CNW9 HELIPAD CLSD DUE CONST 1707130659 TIL APRX 1709152359
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171260 CYVR VANCOUVER INTL
+   CYVR DUE LOW LEVEL TFC, IFR ACFT ON VIS APCH RWY 08L OR RWY 08R 
+   ADZ TWR IF UNABLE TO MAINTAIN ON OR ABV GP. 1707121400 TIL APRX 
+   1710121700
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171261 CYVR VANCOUVER INTL
+   CYVR ACFT CONDUCTING VISUAL APCH RWY 08L OR 26R PLAN PUB IFR 
+   MISSED APCH PROC. 1707121415 TIL APRX 1710121700
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171377 CYVR PITT MEADOWS
+   CYPK CABLE CROSSING 491312N 1224936W (APRX 4 NM W AD) 323 FT AGL 
+   335 MSL CROSSING MARKED BUT NOT LGTD 1707281539 TIL APRX 
+   1710262000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171448 CYVR PITT MEADOWS
+   CYPK RNAV(GNSS) Z RWY 08R APCH: LNAV MINIMA: NOT AUTH 1708032130 
+   TIL 1710120901
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171462 CYVR PITT MEADOWS
+   CYPK WEF 2017 AUG 04 1900 AMEND PUB: 
+   RWY 08R/26L LEN TO READ 5003 FT.
+   THR 08R DISPLACED 197 FT. THR 26L DISPLACED 164 FT.
+   LIGHTING RWY 08R AND RWY 26L TO READ: 
+   08R-AO(TE ME) P2, 26L-AO(TE ME) P2
+   DECLARED DIST:
+   RWY 08R: TORA 5003 TODA 5495 ASDA 5003 LDA 4806
+   RWY 26L: TORA 5003 TODA 5495 ASDA 5003 LDA 4839
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171485 CYVR VANCOUVER/HARBOUR(PUBLIC)(HELI)
+   CBC7 AMEND PUB: CRANE RADIUS 1180 FT CENTRE 491721N 1230547W 
+   (APRX 0.4 NM NE AD) 398 FT AGL 420 MSL LGTD AND PAINTED
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171531 CYVR VANCOUVER/HARBOUR(PUBLIC)(HELI)
+   CBC7 COPTER RNAV(GNSS) 071 DEG APCH: MISSED APCH: MAINTAIN 2100 
+   INSTEAD OF 2000 1708112248 TIL APRX 1712072359
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171548 CYVR VANCOUVER(GEN HOSP)(HELI)
+   CBK4 CRANE 491536N 1230748W (APRX 0.1 NM SW AD) 180 FT AGL 320 
+   MSL. NOT LGTD 1708161700 TIL 1709162100
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171549 CYVR VANCOUVER(CHILDREN'S HOSP)(HELI)
+   CAK7 CABLE CROSSING 491216N 1230554W (APRX 3 NM SE AD) 
+   150 FT AGL 153 MSL. NON STANDARD MARKING (BALL MARKERS MISSING)
+   1708141710 TIL APRX 1711102000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171573 CYVR VANCOUVER/BOUNDARY BAY
+   CZBB OBST LGT U/S TOWER 2400 FT BFR THR 30 ON EXTENDED RCL
+   15 FT AGL 20 FT MSL
+   1708160020 TIL APRX 1710080901
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171586 CYVR VANCOUVER INTL
+   CYVR APN VI TAXI EASTBOUND ONTO TWY P RESTRICTED TO B767/A300 AND
+   SMALLER ONLY.
+   APN VI WESTBOUND ONTO TWY P NO SIZE RESTRICTION.
+   TWY P RIGHT TURN ONTO TWY M RESTRICTED TO B767/A300 AND SMALLER
+   ONLY. TWY M TO TWY P NO SIZE RESTRICTION.
+   1708162220 TIL 1710170900
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171592 CYVR VANCOUVER INTL
+   CYVR KEINN ONE ARR:
+   POWOL TRANSITION: SEGMENT FROM POWOL TO QUODY NOT AUTH
+   TRENA TRANSITION: SEGMENT FROM TRENA TO QUODY NOT AUTH
+   1708171200 TIL APRX 1711171800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171642 CYVR SQUAMISH
+   CYSE OBST LGT U/S TOWER 495725N 1231033W (APRX 10 NM NNW AD) 147 
+   FT AGL 2250 MSL 1708212115 TIL APRX 1710212115
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171645 CYVR VANCOUVER INTL
+   CYVR OBST LGT U/S TOWER 490816N 1231202W (APRX 3 NM SSW AD)
+   200 FT AGL 200 MSL
+   1708220630 TIL APRX 1711222100
+ 
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;000000 CYVR VANCOUVER INTL
+  CYVR RSC 08L/26R 100 PCT BARE AND DRY. 1709102220
+CYVR RSC 08R/26L 100 PCT BARE AND DRY. 1709102220
+CYVR RSC 13/31 100 PCT BARE AND DRY. 1709102220
+</pre>
+</span></div>
+</div>
+<BR id="br_notam_station">
+<div id="notam_station_whole_section" class="notam_print_section">
+
+<span id="notam_print_item"><input class="printcheckbox" type="checkbox" name="" value="" onClick="notam_set_print_options(this)">&nbsp;&nbsp;<B>CYXX</B>
+</span>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170440 CYXX CHILLIWACK
+  CYCW APAPI 07 U/S
+1708311400 TIL APRX 1712011900
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170448 CYXX HOPE
+  OBST CABLE CROSSING BALL MARKERS MISSING 494606N 1212127W
+(APRX 25 NM N AD) 400 FT AGL 1830 MSL
+1708311620 TIL APRX 1711282000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170449 CYXX HOPE
+  OBST CABLE CROSSING BALL MARKERS MISSING 493919N 1212208W
+(APRX 18 NM N AD) 500 FT AGL 1700 MSL
+1708311625 TIL APRX 1711282000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170450 CYXX HOPE
+  OBST CABLE CROSSING BALL MARKERS MISSING 494640N 1212202W
+(APRX 25 NM N AD) 689 FT AGL 1834 MSL
+1708311625 TIL APRX 1711282000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170452 CYXX CHILLIWACK
+  CYCW ABN U/S
+1709011615 TIL APRX 1712011700
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170455 CYXX HARRISON HOT SPRINGS(WATER)
+  CAE7 OBST LGT U/S TOWER 491738N 1214635W (APRX 0.7 NM SE AD)
+135 FT AGL 235 MSL
+1709060615 TIL 1712052100
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170461 CYXX CHILLIWACK
+  CYCW THR 07 DISPLACED 800 FT DUE CONST EQPT 400 FT BFR
+THR AND 350 FT LEFT OF EXTENDED RCL. 60 FT AGL 92 MSL. NOT LGTD
+1709081815 TIL APRX 1712011900
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170463 CYXX CHILLIWACK
+  CYCW UNMANNED AIR VEHICLE (UAV) ACT RADIUS 0.25 NM CENTRE
+491035N 1215912W (APRX 2 NM WNW AD) SFC TO 230 FT AGL.
+WINGSPAN APRX 3 FT WEIGHT 9 LB COLOR GREY
+1709111600 TIL 1709112100
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170326 CYXX HOPE
+   HE-- NDB 245 U/S 1706290125 TIL APRX 1709292359
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170327 CYXX CHILLIWACK
+   CYCW CABLE CROSSING 491227N 1214536W (APRX 8 NM NE AD) 70 FT AGL 
+   125 MSL. NON STANDARD MARKING (BALL MARKERS MISSING) 1706291610 
+   TIL APRX 1709262000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170385 CYXX ABBOTSFORD(TECK)(HELI)
+   CTK8 CABLE CROSSING 491007N 1222618W (APRX 3 NM NW AD) 70 FT AGL 
+   75 MSL UNMARKED 1708081518 TIL APRX 1711062000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170404 CYXX HOPE
+   OBST CABLE CROSSING BALL MARKERS MISSING 493418N 1212656W (APRX 
+   12 NM N AD) 509 FT AGL 2239 MSL 1708151706 TIL APRX 1711132000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170405 CYXX HOPE
+   CYHE CABLE CROSSING BALL MARKERS MISSING 492325N 1213737W (APRX 5 
+   NM W AD) 590 FT AGL 1490 MSL 1708151707 TIL APRX 1711132000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170406 CYXX HOPE
+   CYHE CABLE CROSSING BALL MARKERS MISSING 493254N 1212808W (APRX 
+   11 NM N AD) 515 FT AGL 1841 MSL 1708151708 TIL APRX 1711132000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170414 CYXX CHILLIWACK
+   CYCW CRANE 490912N 1215724W (APRX 2200 FT W OF THR 07) 120 FT AGL 
+   UNMARKED NOT LGTD 1708181700 TIL 1710310000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;000000 CYXX ABBOTSFORD
+  CYXX RSC 01/19 100 PCT BARE AND DRY. 1709101230
+CYXX RSC 07/25 100 PCT BARE AND DRY. 1709101231
+RMK: TWY A,A1,B,C,C1,C4,D ALL 100PCT BARE AND DRY
+</pre>
+</span></div>
+</div>
+</div>
+
+<div id="notam_title_whole_section" class="notam_print_section">
+<span id="notam_print_item">
+<input class="printcheckbox" type="checkbox" name="" value="" onClick="notam_set_print_options(this)">&nbsp;&nbsp;<b>FIR (Flight Information Region) NOTAM file</b>
+<br><br></span>
+<div id="notam_station_whole_section" class="notam_print_section">
+
+<span id="notam_print_item"><input class="printcheckbox" type="checkbox" name="" value="" onClick="notam_set_print_options(this)">&nbsp;&nbsp;<B>CZVR</B>
+</span>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171127 CZVR VANCOUVER FIR
+  YYD- HOUSTON VOR 114.7 ROTATION, ADD 3 DEG TO ALL PUB ENROUTE RDL
+ASSOCIATED WITH YYD. SPECIFIC RDL ISSUED BY ATC SHALL BE ADHERED TO
+AS PER THE RECEIVED AND ACKNOWLEDGED CLR.
+1708240030 TIL 1712070901
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171183 CZVR VANCOUVER FIR
+  YNY- ENDERBY VOR 115.2 U/S
+1708310533 TIL APRX 1709292359
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171190 CZVR VANCOUVER FIR
+  CZVR USER PREFERRED ROUTE (UPR) TRIAL.
+ACFT MAY FILE EASTBOUND UPR WHEN ENTERING VANCOUVER FIR FM
+OAKLAND OCEANIC AIRSPACE PROVIDED THEY:
+-FLT PLAN A RTE AT LEAST 10 NM CLR OF ANY ACT CANADIAN CLASS F
+ AIRSPACE.
+-COMPLY WITH DEST AD ARR ROUTING REQUIREMENTS FOR ACFT TRANSITING
+ VANCOUVER FIR TO EASTERN DEST.
+ANY RTE REQUIREMENTS BEYOND VANCOUVER FIR REMAIN IN EFFECT.
+FOR INFO, COMMENTS OR CONCERNS CTC 604-586-4500
+1708312000 TIL APRX 1710311600
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171209 CZVR VANCOUVER FIR
+  CZVR PURSUANT TO CAR 601.14, 601.15(B) AND 601.16, FOREST FIRE
+AREA BOUNDED BY 490431N 1153154W-490312N 1150939W-485959N 1150904W-
+490002N 1153217W-490431N 1153154W (CENTRE APRX 17 NM SW
+CBE2). RESTRICED AIRPSACE WITHIN SAME AREA, SFC TO 9000 FT MSL.
+AERIAL FIRE SUPRESSION IN PROGRESS. EXC WHERE OPR UNDER CAR 601.17,
+ALL ACFT TO REMAIN CLR, INCLUDING UNMANNED AIR VEHICLES.
+SR-SS.
+1709040123 TIL APRX 1709180200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171214 CZVR VANCOUVER FIR
+  CZVR IFR TRAINING FLT NOT AUTH AT NANAIMO(CYCD) AND
+QUALICUM BEACH(CAT4)
+1709042100 TIL APRX 1710120901
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171224 CZVR VANCOUVER FIR
+  CZVR BLASTING ACT RADIUS 2 NM CENTRE 562538N 1300652W
+(APRX 30 NM N CZST) SFC TO 2000 FT AGL SR-SS
+1709051925 TIL APRX 1709191800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171225 CZVR VANCOUVER FIR
+  CZVR BLASTING ACT RADIUS 0.5 CENTRE 545512N 1221425W
+(APRX 39 NM SE CYZY AD) SFC TO 500 FT AGL
+1709072000 TIL APRX 1709212000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171228 CZVR VANCOUVER FIR
+  CZVR BLASTING ACT RADIUS 2 NM CENTRE
+523925N 1282004W (APRX 28 NM WNW CAH2)
+523928N 1282133W (APRX 29 NM WNW CAH2)
+524008N 1282227W (APRX 30 NM WNW CAH2)
+SFC TO 1650 FT AGL
+DLY 1200-0300
+1709061200 TIL APRX 1709220300
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171230 CZVR VANCOUVER FIR
+  CZVR PURSUANT TO CAR 601.14, 601.15(B) AND 601.16, FOREST FIRE
+AREA RADIUS 10 NM CENTRE 512736N 1173221W (APRX 23 NM W GOLDEN AD)
+RESTRICTED AIRSPACE ESTABLISHED SFC TO 7000 FT MSL. AERIAL FIRE
+SUPRESSION IN PROGRESS. EXC WHERE OPR UNDER CAR 601.17, ALL ACFT
+TO REMAIN CLR INCLUDING UNMANNED AIR VEHICLES, UNLESS AUTH BY
+PARKS CANADA. CTC AIR OPS 123.45
+DAYLIGHT HR
+1709061910 TIL APRX 1709302000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171232 CZVR VANCOUVER FIR
+  CZVR PURSUANT TO CAR 601.14, 601.15(B) AND 601.16,
+FOREST FIRE RADIUS 5 NM CENTRE 494407N 1194931W
+(APRX 19 NM NW CYYF) RESTRICTED AIRSPACE WITHIN SAME AREA,
+SFC TO 6500 FT MSL. AERIAL FIRE SUPPRESSION IN PROGRESS.
+EXC FOR POLICE OPS, MEDEVAC, AND WHERE OPR UNDER CAR 601.17,
+ALL ACFT TO REMAIN CLR, INCLUDING UNMANNED AIR VEHICLES. SR-SS
+1709062220 TIL APRX 1709140200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171233 CZVR VANCOUVER FIR
+  CZVR PURSUANT TO CAR 601.14, 601.15(B) AND 601.16, FOREST FIRE AREA
+BOUNDED BY 505110N 1204800W-505724N 1213700W-511304N 1214431W-
+513500N 1211600W-513830N 1203800W-505107N 1204807W-
+505110N 1204800W (CENTRE APRX 10 NM SE CBY6).
+RESTRICTED AIRSPACE WITHIN SAME COORD, SFC TO 8000 FT MSL.
+AERIAL FIRE SUPRESSION IN PROGRESS. EXC POLICE OPS/MEDEVAC AND
+WHERE OPR UNDER CAR 601.17, ALL ACFT TO REMAIN CLR, INCLUDING
+UNMANNED AIR VEHICLES. FOR AUTH TO ENTER IFR CTC VANCOUVER ACC.
+DAYLIGHT HR
+1709062226 TIL APRX 1709140200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171234 CZVR VANCOUVER FIR
+  CZVR V354 BTN LW AND GRASE: MOCA TO READ 7500
+DAYLIGHT HR
+1709040013 TIL APRX 1709140200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171239 CZVR VANCOUVER FIR
+  CZVR PURSUANT TO CAR 601.14, 601.15(B) AND 601.16, FOREST FIRE
+AREA RADIUS 5 NM CENTRE 491914N 1155231W (APRX 13 NM S CAE2).
+RESTRICTED AIRSPACE WITHIN SAME AREA SFC TO 9000 FT MSL.
+AERIAL FIRE SUPPRESSION IN PROGRESS. EXC WHERE OPR UNDER CAR
+601.17, ALL ACFT TO REMAIN CLR, INCLUDING UNMANNED AIR VEHICLES.
+SR-SS
+1709072140 TIL APRX 1709160200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171240 CZVR VANCOUVER FIR
+  CZVR PURSUANT TO CAR 601.14, 601.15(B) AND 601.16, FOREST FIRE
+AREA 520935N 1250311W-515529N 1243750W-513835N 1250602W-515915N
+1253436W-520935N 1250311W (CENTRE APRX 17 NM NW CBD9).
+RESTRICTED AIRSPACE WITHIN SAME AREA, SFC TO 9000 FT MSL. AERIAL
+FIRE SUPPRESSION IN PROGRESS. EXC WHERE OPR UNDER CAR 601.17, ALL
+ACFT TO REMAIN CLR INCLUDING UNMANNED AIR VEHICLES. ACFT
+TRANSITING REMAIN 10 NM NE OF HWY 20 AND CTC BIRDDOG ACFT ON 122.9
+TO COORD. SR-SS
+1709072204 TIL APRX 1709220200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171241 CZVR VANCOUVER FIR
+  CZVR BLASTING ACT RADIUS 2.2 NM CENTRE 5127N 11619W
+(APRX 27 NM NE GOLDEN AD) SFC TO 200 FT AGL
+2130-2200 DLY
+1709082130 TIL APRX 1709212200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171242 CZVR VANCOUVER ACC
+  CZVR PAL 236.0 AT KAMLOOPS U/S
+1709081255 TIL APRX 1709292359
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171243 CZVR VANCOUVER FIR
+  CYR- 109 JUAN DE FUCA STRAIT ACT SFC TO 14000 FT MSL.
+1709121630 TIL 1709122230
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171244 CZVR VANCOUVER FIR
+  CZVR J541 BTN YYJ AND YXS NOT SUITABLE FOR VOR NAV
+1709081735 TIL APRX 1711091800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171245 CZVR VANCOUVER FIR
+  CZVR B22 BTN YZA AND WL: MOCA/MEA TO READ: 10000
+R19 BTN YZA AND YKA: MOCA/MEA TO READ: 10000
+B27 BTN YZA AND STOAN: MEA TO READ: 10000
+B8 BTN WL AND YKA: MOCA/MEA TO READ: 10000
+V324 BTN ALTAG AND YKA: MOCA/MEA TO READ: 10000
+V325 BTN REVAP AND YZA: MOCA TO READ: 10000
+DAYLIGHT HR
+1709081800 TIL APRX 1709140200
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171247 CZVR VANCOUVER FIR
+  CZVR CABLE CROSSING BALL MARKERS MISSING 494736N 1212120W
+(APRX 26 NM N HOPE AD) 545 FT AGL 1894 MSL
+1709082030 TIL APRX 1712062000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171248 CZVR VANCOUVER FIR
+  CZVR CABLE CROSSING BALL MARKERS MISSING 494636N 1212204W
+(APRX 26 NM N HOPE AD) 689 FT AGL 1839 MSL
+1709082030 TIL APRX 1712062000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171249 CZVR VANCOUVER FIR
+  CZVR BLASTING ACT RADIUS 0.25 NM CENTRE 545659N 1221131W
+(APRX 39 NM SE MACKENZIE AD) SFC TO 500 FT AGL
+SR-SS DLY
+1709101330 TIL 1709210325
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171251 CZVR VANCOUVER FIR
+  CZVR DUE TO REDUCED SYSTEM CAPACITY AND ANTICIPATED TFC DEMANDS, VFR
+TFC PLANNED ABV 2500 FT MSL MAY ANTICIPATE ALTERNATE ROUTING AND/OR
+ALT IN VANCOUVER TML CLASS C AIRSPACE
+1709101939 TIL 1709110330
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;131352 CZVR VANCOUVER FIR
+   CZVR AMEND B22: BTN IKBAK AND YZA: MEA TO READ 9700 MOCA TO READ 
+   9500
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170527 CZVR VANCOUVER FIR
+   CZVR 'DESCEND VIA' AND 'CLIMB VIA' TERMINOLOGIES ARE NOT APPROVED 
+   FOR USE IN CZQX CZQM CZUL CZYZ CZWG CZEG AND CZVR FIR. 
+   FOR ALL STARS, WHEN A LOWER ALT IS ISSUED, PILOTS SHALL DESCEND 
+   ON THE STAR PROFILE TO THE ATC-ASSIGNED ALT. 
+   CHARTED RESTRICTIONS ABV THE ASSIGNED ALT REMAIN MANDATORY.
+   1705231251 TIL APRX 1710120901
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;170962 CZVR VANCOUVER FIR
+   CZVR BLASTING ACT RADIUS 0.6 NM CENTRE 503518N 1232634W
+   (APRX 29 NM SW CGL5) SFC TO 1500 FT AGL.
+   SR-SS DLY
+   1707301238 TIL APRX 1710280100
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171028 CZVR VANCOUVER FIR
+   CZVR J523 BTN YZP AND YZT NOT AUTH FOR VOR NAV 1708091815 TIL 
+   APRX 1711091800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171029 CZVR VANCOUVER FIR
+   CZVR V317-440 BTN YZP AND YJQ: MEA TO READ 6000 INSTEAD OF 4200 
+   1708091815 TIL APRX 1711091800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171031 CZVR VANCOUVER FIR
+   CZVR V324 BTN YDC AND YKA NOT SUITABLE FOR VOR NAV 1708091815 TIL 
+   APRX 1711091800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171032 CZVR VANCOUVER FIR
+   CZVR V324 BTN YYD AND YWL CHANGE OVER POINT 86 NM FM YYD AND 123 
+   NM FM YWL WITH A 8 NM GAP 1708091815 TIL APRX 1711091800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171033 CZVR VANCOUVER FIR
+   CZVR V441 BTN WIGNO AND BOOPY NOT SUITABLE FOR VOR NAV 1708091815 
+   TIL APRX 1711091800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171034 CZVR VANCOUVER FIR
+   CZVR V368 BTN SPYSR AND ZKI NOT AUTH FOR VOR NAV 1708091815 TIL 
+   APRX 1711091800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171058 CZVR VANCOUVER FIR
+   CZVR CABLE CROSSING BALL MARKERS MISSING 495032N 1212115W (APRX 
+   29 NM N HOPE AD) 673 FT AGL 3123 MSL 1708151711 TIL APRX 
+   1711132000
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171086 CZVR VANCOUVER FIR
+   CZVR V359 BTN YNY AND SX NOT SUITABLE FOR VOR NAVIGATION 
+   1708182330 TIL APRX 1711151800
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171092 CZVR VANCOUVER ACC
+   CZVR PAL 284.0 AT PRINCE RUPERT U/S 1708200025 TIL APRX 1710122359
+</pre>
+</span></div>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;171093 CZVR VANCOUVER FIR
+   CZVR VICTORIA TML PAL 290.8 AT ABBOTSFORD U/S 1708200030 TIL APRX 
+   1710122359
+</pre>
+</span></div>
+</div>
+</div>
+
+<div id="notam_title_whole_section" class="notam_print_section">
+<span id="notam_print_item">
+<input class="printcheckbox" type="checkbox" name="" value="" onClick="notam_set_print_options(this)">&nbsp;&nbsp;<b>National NOTAM file</b>
+<br><br></span>
+<div id="notam_station_whole_section" class="notam_print_section">
+
+<span id="notam_print_item"><input class="printcheckbox" type="checkbox" name="" value="" onClick="notam_set_print_options(this)">&nbsp;&nbsp;<B>CYHQ</B>
+</span>
+<div id="notam_bulletin" class="notam_print_section">
+<span id="notam_print_item"><pre>
+<input class="printcheckbox" type="checkbox" name="notam_bulletin_checkbox"  value="" onClick="notam_set_print_options(this)">&nbsp;NO NOTAM ON FILE FOR THIS IDENTIFIER.</pre>
+</span></div>
+</div>
+</div>
+
+</div>
+<br><br>
+<input type="button" class="printbutton" name="notam_print_button" value="Print NOTAM" disabled="true" onClick="notam_validate_print_options()">
+<br><br>
+
+
+
+<!-- #EndEditable -->
+<form name="Horloge" >
+  <table cellspacing="0" cellpadding="0" width="756" bgcolor="#205670">
+    <tr >
+      <td height="34"><font color="#FFFFCC" size="-2">Your
+          time </font><font color="#FFFFCC" size="-1">
+        <input name="HreLocale" value="Not available">
+        </font></td>
+      <td height="34"><font color="#FFFFCC" size="-2">UTC
+          time</font><font color="#FFFFCC" size="-1">
+        <input name="HreUTC" value="Not available">
+        </font></td>
+      <td nowrap height="34" width="100">
+        <div align="center"><font size="-2" color="#FFFFCC">
+          <input type="button" name="Clock Disclaimer" value="Clock Disclaimer" onClick="MM_popupMsg('Reliable clock times are dependant on two sources:\r1. Your computer`s time\r2. Your computer`s time zone settings\rPlease verify that both these settings are correct before relying on the clock.')">
+          </font></div>
+      </td>
+      <td height="34"  colspan="4" width="67" nowrap>
+        <div align="center"><font color="#FFFFCC" size="-2"> </font></div>
+        <div align="center"><font size="+1"><a href="javascript:seLogger()"><font color="#FFFFCC" size="-1">Log
+                out</font></a></font></div>
+      </td>
+    </tr>
+  </table>
+  <table width="756" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>
+        <div align="left"><font size="-1">Weather
+            data provided by Environment Canada and NAV CANADA</font> </div>
+      </td>
+      <td>
+        <div align="left"><img src="../../images/bannieres/ec-logo-e.gif" width="221" height="20"></div>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+<!-- InstanceEnd --></html>

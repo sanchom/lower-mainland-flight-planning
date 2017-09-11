@@ -3,7 +3,7 @@ import re
 from flask import Flask
 from six import iteritems
 
-from navcanada import parse_metars_and_tafs, get_metar_page, get_upper_winds_page, parse_upper_winds
+from navcanada import parse_metars_and_tafs, get_metar_page, get_upper_winds_page, parse_upper_winds, parse_notams, get_notams_page
 
 app = Flask(__name__)
 
@@ -15,6 +15,7 @@ def make_fd_row(elements):
 def homepage():
     metars_and_tafs = parse_metars_and_tafs(get_metar_page())
     upper_winds = parse_upper_winds(get_upper_winds_page())
+    notams = parse_notams(get_notams_page())
 
     # There's got to be a better way to construct an html response
     # than explicitly concatenating together a bunch of strings.
@@ -85,6 +86,12 @@ margin-top: 5em;
         for w in winds:
             result_page = result_page + make_fd_row((w['data_from'], w['valid_at'], w['3000'], w['6000'], w['9000']))
         result_page = result_page + '</table>\n'
+
+    result_page = result_page + '<h1>NOTAMs</h1>\n'
+    result_page = result_page + '<pre>\n'
+    for notam in notams:
+        result_page = result_page + notam + '\n'
+    result_page = result_page + '</pre>\n'
 
     result_page = result_page + '<div class="footer"><p><a href="https://github.com/sanchom/lower-mainland-flight-planning">github.com/sanchom/lower-mainland-flight-planning</a></p></div>\n'
 

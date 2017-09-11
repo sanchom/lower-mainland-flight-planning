@@ -49,5 +49,11 @@ class TestMetarParser(unittest.TestCase):
             result = navcanada.parse_upper_winds(page)
             self.assertTrue('YVR' in result)
 
+    def test_extracts_metars(self):
+        with io.open('test_data/notams.html', 'r', encoding='latin-1') as f:
+            page = f.read()
+            result = navcanada.parse_notams(page)
+            self.assertTrue(len(result) > 0)
+
 if __name__ == '__main__':
     unittest.main()
