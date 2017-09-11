@@ -43,5 +43,11 @@ class TestMetarParser(unittest.TestCase):
             for station, data in iteritems(result):
                 self.assertTrue('TAF' in data)
 
+    def test_extract_upper_winds(self):
+        with io.open('test_data/fds.html', 'r', encoding='latin-1') as f:
+            page = f.read()
+            result = navcanada.parse_upper_winds(page)
+            self.assertTrue('YVR' in result)
+
 if __name__ == '__main__':
     unittest.main()

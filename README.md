@@ -3,9 +3,10 @@
 A Heroku app using Python that serves a simple webpage with flight
 planning information for the BC Lower Mainland.
 
-# Providing feedback
+# Please send feedback
 
-Send suggestions, feature requests, bugs by filling out an issue (there's a tab up above).
+Send me suggestions, feature requests, or bugs by [filling out an
+issue](https://github.com/sanchom/lower-mainland-flight-planning/issues).
 
 # Setup for local development
 
