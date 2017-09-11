@@ -62,8 +62,8 @@ img {
     margin: 0.5em;
 }
 .footer {
-margin-left: 20%;
-margin-right: 20%;
+margin-left: 10%;
+margin-right: 10%;
 text-align: center;
 font-size: 70%;
 margin-top: 5em;
