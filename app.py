@@ -105,7 +105,7 @@ margin-bottom: 3em;
         result_page = result_page + notam + '\n'
     result_page = result_page + '</div>\n'
 
-    result_page = result_page + '<div class="footer"><a name="disclaimer" /><p>This page is a good-faith attempt to reproduce a selection of flight planning information from <a href="http://flightplanning.navcanada.ca">flightplanning.navcanada.ca</a> that I find generally useful for VFR flying in the area. I don\'t guarantee its accuracy, completeness, relevance, or currency.</p><p>Code, feedback: <a href="https://github.com/sanchom/lower-mainland-flight-planning">github.com/sanchom/lower-mainland-flight-planning</a></p></div>\n'
+    result_page = result_page + '<div class="footer"><a name="disclaimer" /><p>This page is a good-faith attempt to reproduce a selection of flight planning information from <a href="http://flightplanning.navcanada.ca">navcanada.ca</a> that I find generally useful for VFR flying in the area. I don\'t guarantee its accuracy, completeness, relevance, or currency.</p><p>Code, feedback: <a href="https://github.com/sanchom/lower-mainland-flight-planning">github.com/sanchom/lower-mainland-flight-planning</a></p></div>\n'
 
     result_page = result_page + '</body>\n</html>'
 
