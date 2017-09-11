@@ -93,7 +93,7 @@ margin-top: 5em;
         result_page = result_page + notam + '\n'
     result_page = result_page + '</pre>\n'
 
-    result_page = result_page + '<div class="footer"><p><a href="https://github.com/sanchom/lower-mainland-flight-planning">github.com/sanchom/lower-mainland-flight-planning</a></p></div>\n'
+    result_page = result_page + '<div class="footer"><p>Code, feedback: <a href="https://github.com/sanchom/lower-mainland-flight-planning">github.com/sanchom/lower-mainland-flight-planning</a></p></div>\n'
 
     result_page = result_page + '</body>\n</html>'
 
