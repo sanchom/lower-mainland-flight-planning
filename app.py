@@ -26,12 +26,12 @@ def homepage():
     <title>Lower Mainland Flight Planning Info</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <style>
-@media all {html {font-size: 18px;} .gfa {width: 500px;} .footer {margin-left: 10%; margin-right: 10%; } }
-@media all and (max-width:800px){html {font-size: 18px;} .gfa {width: 500px;} }
-@media all and (max-width:720px){html {font-size: 17px;} .gfa {width: 500px;} }
-@media all and (max-width:640px){html {font-size: 16px;} .gfa {width: 500px;} .footer {margin-left: 0%; margin-right: 0%; } }
-@media all and (max-width:560px){html {font-size: 15px;} .gfa {width: 448px;} }
-@media all and (max-width:480px){html {font-size: 14px;} .gfa {width: 384px;} }
+@media all {html body table {font-size: 18px;} .gfa {width: 500px;} .footer {margin-left: 10%; margin-right: 10%; } }
+@media all and (max-width:800px){html body table {font-size: 18px;} .gfa {width: 500px;} }
+@media all and (max-width:720px){html body table {font-size: 17px;} .gfa {width: 500px;} }
+@media all and (max-width:640px){html body table {font-size: 16px;} .gfa {width: 500px;} .footer {margin-left: 0%; margin-right: 0%; } }
+@media all and (max-width:560px){html body table {font-size: 15px;} .gfa {width: 448px;} }
+@media all and (max-width:480px){html body table {font-size: 14px;} .gfa {width: 384px;} }
 
 body {
     margin-top: 5em;
@@ -41,7 +41,6 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 table {
-    font-size: 100%;
     border-spacing: 0;
     border-collapse: collapse;
 }
