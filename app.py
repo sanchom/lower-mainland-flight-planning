@@ -79,6 +79,9 @@ margin-top: 5em;
         # Splitting the TAF for display at every 'FM' element.
         formatted_taf = re.sub(' FM', ' <br />FM', data['TAF'])
         result_page = result_page + '<p>{}</p>\n'.format(formatted_taf)
+    result_page = result_page + '<h1>Supplemental information</h1\n'
+    result_page = result_page + '<p>Lower mainland ATIS: 1-877-517-2847</p>\n'
+    result_page = result_page + '<p><a href="http://atm.navcanada.ca/atm/iwv/CZBB">CZBB (Boundary Bay) current winds</a></p>\n'
     for station, winds in iteritems(upper_winds):
         result_page = result_page + '<h1>Upper winds (Vancouver)</h1>\n'
         result_page = result_page + '<table>\n'
