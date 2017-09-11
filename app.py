@@ -57,7 +57,7 @@ th {
     justify-content: center;
 }
 .pre {
-    white-space: pre;
+    white-space: pre-wrap;
 }
 img {
     margin: 0.5em;
