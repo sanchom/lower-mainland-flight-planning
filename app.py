@@ -25,10 +25,10 @@ def homepage():
   <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <style>
-@media all {html {font-size: 18px;} .gfa {width: 500px;} }
+@media all {html {font-size: 18px;} .gfa {width: 500px;} .footer {margin-left: 10%; margin-right: 10%; } }
 @media all and (max-width:800px){html {font-size: 18px;} .gfa {width: 500px;} }
 @media all and (max-width:720px){html {font-size: 17px;} .gfa {width: 500px;} }
-@media all and (max-width:640px){html {font-size: 16px;} .gfa {width: 500px;} }
+@media all and (max-width:640px){html {font-size: 16px;} .gfa {width: 500px;} .footer {margin-left: 0%; margin-right: 0%; } }
 @media all and (max-width:560px){html {font-size: 15px;} .gfa {width: 448px;} }
 @media all and (max-width:480px){html {font-size: 14px;} .gfa {width: 384px;} }
 
@@ -62,8 +62,6 @@ img {
     margin: 0.5em;
 }
 .footer {
-margin-left: 10%;
-margin-right: 10%;
 text-align: center;
 font-size: 70%;
 margin-top: 5em;
