@@ -23,6 +23,7 @@ def homepage():
     result_page = """
 <html>
   <head>
+    <title>Lower Mainland Flight Planning Info</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <style>
 @media all {html {font-size: 18px;} .gfa {width: 500px;} .footer {margin-left: 10%; margin-right: 10%; } }
