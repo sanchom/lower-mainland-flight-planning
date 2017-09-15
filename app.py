@@ -23,6 +23,7 @@ def homepage():
     result_page = """
 <html>
   <head>
+    <meta name="google-site-verification" content="7IP0_xtDCyu3DT0l7UCNPRZ6Uga0jK8R_UUiGZqqp4M" />
     <title>Lower Mainland Flight Planning Info</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <style>
