@@ -27,61 +27,67 @@ def homepage():
     <title>Lower Mainland Flight Planning Info</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <style>
-@media all {html body table {font-size: 18px;} .gfa {width: 500px;} .footer {margin-left: 10%; margin-right: 10%; } }
-@media all and (max-width:800px){html body table {font-size: 18px;} .gfa {width: 500px;} }
-@media all and (max-width:720px){html body table {font-size: 17px;} .gfa {width: 500px;} }
-@media all and (max-width:640px){html body table {font-size: 16px;} .gfa {width: 100%;} .footer {margin-left: 0%; margin-right: 0%; } }
-@media all and (max-width:560px){html body table {font-size: 15px;} .gfa {width: 100%;} }
-@media all and (max-width:480px){html body table {font-size: 14px;} .gfa {width: 100%;} }
-
-body {
+    @media all {
+      html, table {font-size: 18px;}
+      .gfa {width: 500px;}
+      .footer {margin-left: 10%; margin-right: 10%;}
+    }
+    @media all and (max-width: 625px){
+      html, table {font-size: 14px;}
+      .gfa {width: 100%;}
+      .footer {margin-left: 5%; margin-right: 5%;}
+    }
+    body {
     margin-top: 5em;
     margin-bottom: 5em;
     margin-left: 10%;
     margin-right: 10%;
     font-family: 'Roboto Slab', serif;
-}
-table {
+    }
+    p {
+    line-height: 140%;
+    }
+    table {
     border-spacing: 0;
     border-collapse: collapse;
-}
-td, th {
+    }
+    td, th {
     padding: 0.5em;
-}
-th {
+    }
+    th {
     border-bottom: 1px solid;
-}
-.gfa-container {
+    }
+    .gfa-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-img {
+    }
+    img {
     margin: 0.5em;
-}
-.footer {
-text-align: center;
-font-size: 70%;
-margin-top: 5em;
-}
-.header {
-text-align: center;
-font-size: 70%;
-margin-bottom: 3em;
-}
-.notam {
-margin-top: 0.5em;
-padding-top: 0.5em;
-padding-bottom: 0.5em;
-margin-bottom: 0.5em
-}
-.new-notam {
-background-color:#e6f2ff;
-}
-.notam_content {
-margin-left: 3em;
-margin-right: 10%;
-}
+    }
+    .footer {
+    text-align: center;
+    font-size: 70%;
+    margin-top: 5em;
+    }
+    .header {
+    text-align: center;
+    font-size: 70%;
+    margin-bottom: 3em;
+    }
+    .notam {
+    margin-top: 0.5em;
+    margin-bottom: 2.5em
+    }
+    .new-notam {
+    margin-left: -1em;
+    padding-left: 1em;
+    border-left: 2px solid red;
+    }
+    .notam_content {
+    margin-left: 3em;
+    margin-right: 10%;
+    }
     </style>
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
