@@ -56,9 +56,6 @@ th {
     flex-wrap: wrap;
     justify-content: center;
 }
-.pre {
-    white-space: pre-wrap;
-}
 img {
     margin: 0.5em;
 }
@@ -71,6 +68,19 @@ margin-top: 5em;
 text-align: center;
 font-size: 70%;
 margin-bottom: 3em;
+}
+.notam {
+margin-top: 0.5em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+margin-bottom: 0.5em
+}
+.new-notam {
+background-color:#e6f2ff;
+}
+.notam_content {
+margin-left: 3em;
+margin-right: 10%;
 }
     </style>
 
@@ -113,10 +123,30 @@ margin-bottom: 3em;
         result_page = result_page + '</table>\n'
 
     result_page = result_page + '<h1>NOTAMs</h1>\n'
-    result_page = result_page + '<div class="pre">\n'
+
+
+    notam_stations = set()
     for notam in notams:
-        result_page = result_page + notam + '\n'
-    result_page = result_page + '</div>\n'
+        notam_stations.add(notam['station_id'])
+    newest_notams_per_station = {}
+    for notam in notams:
+        try:
+            newest_notams_per_station[notam['station_id']].append(notam['sequence_id'])
+        except KeyError:
+            newest_notams_per_station[notam['station_id']] = [notam['sequence_id']]
+    for station_id, notam_ids in iteritems(newest_notams_per_station):
+        newest_notams_per_station[station_id] = sorted(notam_ids)[-10:]
+
+
+    result_page = result_page + '<div class="notam new-notam">\n<p class="notam_station">Ten newest NOTAMs per file ({}) are highlighted.</p></div>\n'.format(', '.join(notam_stations))
+    for notam in notams:
+        if notam['sequence_id'] in newest_notams_per_station[notam['station_id']] or notam['sequence_id'] == 0:
+            result_page = result_page + '<div class="notam new-notam">\n'
+        else:
+            result_page = result_page + '<div class="notam">\n'
+        result_page = result_page + '<p class="notam_station">{}</p>\n'.format(notam['station_line'])
+        result_page = result_page + '<p class="notam_content">{}</p>\n'.format(notam['content'])
+        result_page = result_page + '</div>\n'
 
     result_page = result_page + '<div class="footer"><a name="disclaimer" /><p>This page is a good-faith attempt to reproduce a selection of flight planning information from <a href="http://flightplanning.navcanada.ca">navcanada.ca</a> that I find generally useful for VFR flying in the area. I don\'t guarantee its accuracy, completeness, relevance, or currency; <a href="http://www.navcanada.ca/en/pages/terms-of-use.aspx">neither do they</a>.</p><p>Code, feedback: <a href="https://github.com/sanchom/lower-mainland-flight-planning">github.com/sanchom/lower-mainland-flight-planning</a></p></div>\n'
 

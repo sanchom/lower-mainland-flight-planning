@@ -90,5 +90,18 @@ def parse_upper_winds(page):
     return results
 
 def parse_notams(page):
-    notam_match = re.findall('([0-9]{6} C[0-9A-Z]{3}.*?)</pre>', page, flags=re.DOTALL)
-    return notam_match
+    notam_matches = re.findall('([0-9]{6} C[0-9A-Z]{3}.*?)</pre>', page, flags=re.DOTALL)
+    notams = []
+    for match in notam_matches:
+        sequence_id = int(match.split()[0])
+        station_line = match.splitlines()[0]
+        station_id = station_line.split()[1]
+        content = ' '.join(match.splitlines()[1:])
+        content = ' '.join(content.split())
+        notam = {}
+        notam['sequence_id'] = sequence_id
+        notam['station_id'] = station_id
+        notam['station_line'] = station_line
+        notam['content'] = content
+        notams.append(notam)
+    return notams
