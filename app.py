@@ -29,14 +29,15 @@ def homepage():
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <style>
     @media all {
-      html, table {font-size: 18px;}
-      .gfa {width: 500px;}
-      .footer {margin-left: 10%; margin-right: 10%;}
+      html, table {font-size: 18px;} .gfa {width: 500px;} .footer {margin-left: 10%; margin-right: 10%;}
     }
+    @media all and (max-width: 1000px){ html, table { font-size: 17px;} }
+    @media all and (max-width: 925px){ html, table { font-size: 16px;} }
+    @media all and (max-width: 850px){ html, table { font-size: 15px;} }
+    @media all and (max-width: 775px){ html, table { font-size: 14px;} }
+    @media all and (max-width: 700px){ html, table { font-size: 13px;} }
     @media all and (max-width: 625px){
-      html, table {font-size: 14px;}
-      .gfa {width: 100%;}
-      .footer {margin-left: 5%; margin-right: 5%;}
+      html {font-size: 14px;} table {font-size: 12px;} .gfa {width: 100%;} .footer {margin-left: 5%; margin-right: 5%;}
     }
     body {
     margin-top: 5em;
@@ -86,9 +87,10 @@ def homepage():
     padding-left: 1em;
     border-left: 2px solid red;
     }
+
     .notam_content {
-    margin-left: 3em;
-    margin-right: 10%;
+    margin-left: 5%;
+    max-width: 30em;
     }
     </style>
 
