@@ -61,10 +61,11 @@ def homepage():
     .gfa-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     }
     img {
-    margin: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     }
     .footer {
     text-align: center;
