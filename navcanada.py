@@ -3,13 +3,14 @@
 
 import re
 from six.moves import urllib
+import ssl
 
 def get_metar_page():
     """Gets the METAR/TAF page from navcanada.ca.
     """
 
     metar_uri = "https://flightplanning.navcanada.ca/cgi-bin/route.cgi?Langue=anglais&Depart=CYVR&Destination=CYXX&cw_metar=raw_metar"
-    response = urllib.request.urlopen(metar_uri)
+    response = urllib.request.urlopen(metar_uri, context=ssl._create_unverified_context())
     page = response.read().decode('latin-1')
 
     return page
@@ -19,7 +20,7 @@ def get_upper_winds_page():
     """
 
     fd_uri = "https://flightplanning.navcanada.ca/cgi-bin/Fore-obs/fd.cgi?fd_text=fdcn0&Region=31&Langue=anglais"
-    response = urllib.request.urlopen(fd_uri)
+    response = urllib.request.urlopen(fd_uri, context=ssl._create_unverified_context())
     page = response.read().decode('latin-1')
 
     return page
@@ -29,7 +30,7 @@ def get_notams_page():
     """
 
     notam_uri = "https://flightplanning.navcanada.ca/cgi-bin/Fore-obs/notam.cgi?Langue=anglais&TypeBrief=N&Stations=CZBB%20CYVR%20CYPK%20CYNJ%20CYXX&ni_File=File&ni_FIR=fir&ni_HQ=cyhq"
-    response = urllib.request.urlopen(notam_uri)
+    response = urllib.request.urlopen(notam_uri, context=ssl._create_unverified_context())
     page = response.read().decode('latin-1')
 
     return page
