@@ -1,0 +1,64 @@
+@media all {
+    html, table {font-size: 18px;} .gfa {width: 500px;} .footer {margin-left: 10%; margin-right: 10%;}
+}
+@media all and (max-width: 1000px){ html, table { font-size: 17px;} }
+@media all and (max-width: 925px){ html, table { font-size: 16px;} }
+@media all and (max-width: 850px){ html, table { font-size: 15px;} }
+@media all and (max-width: 775px){ html, table { font-size: 14px;} }
+@media all and (max-width: 700px){ html, table { font-size: 13px;} }
+@media all and (max-width: 625px){
+    html {font-size: 14px;} table {font-size: 12px;} .gfa {width: 100%;} .footer {margin-left: 5%; margin-right: 5%;}
+}
+body {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Roboto Slab', serif;
+}
+p {
+    line-height: 140%;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 0.5em;
+}
+th {
+    border-bottom: 1px solid;
+}
+.gfa-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+img {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.footer {
+    text-align: center;
+    font-size: 70%;
+    margin-top: 5em;
+}
+.header {
+    text-align: center;
+    font-size: 70%;
+    margin-bottom: 3em;
+}
+.notam {
+    margin-top: 0.5em;
+    margin-bottom: 2.5em
+}
+.new-notam {
+    margin-left: -1em;
+    padding-left: 1em;
+    border-left: 2px solid red;
+}
+
+.notam_content {
+    margin-left: 5%;
+    max-width: 30em;
+}

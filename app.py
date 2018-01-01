@@ -5,7 +5,7 @@ from six import iteritems
 
 from navcanada import parse_metars_and_tafs, get_metar_page, get_upper_winds_page, parse_upper_winds, parse_notams, get_notams_page
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='static', template_folder='templates')
 
 def make_fd_row(elements):
     row = '<tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr>\n'.format(*elements)
@@ -26,73 +26,8 @@ def homepage():
     <meta name="google-site-verification" content="7IP0_xtDCyu3DT0l7UCNPRZ6Uga0jK8R_UUiGZqqp4M" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lower Mainland Flight Planning Info</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <style>
-    @media all {
-      html, table {font-size: 18px;} .gfa {width: 500px;} .footer {margin-left: 10%; margin-right: 10%;}
-    }
-    @media all and (max-width: 1000px){ html, table { font-size: 17px;} }
-    @media all and (max-width: 925px){ html, table { font-size: 16px;} }
-    @media all and (max-width: 850px){ html, table { font-size: 15px;} }
-    @media all and (max-width: 775px){ html, table { font-size: 14px;} }
-    @media all and (max-width: 700px){ html, table { font-size: 13px;} }
-    @media all and (max-width: 625px){
-      html {font-size: 14px;} table {font-size: 12px;} .gfa {width: 100%;} .footer {margin-left: 5%; margin-right: 5%;}
-    }
-    body {
-    margin-top: 5em;
-    margin-bottom: 5em;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-family: 'Roboto Slab', serif;
-    }
-    p {
-    line-height: 140%;
-    }
-    table {
-    border-spacing: 0;
-    border-collapse: collapse;
-    }
-    td, th {
-    padding: 0.5em;
-    }
-    th {
-    border-bottom: 1px solid;
-    }
-    .gfa-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    }
-    img {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    }
-    .footer {
-    text-align: center;
-    font-size: 70%;
-    margin-top: 5em;
-    }
-    .header {
-    text-align: center;
-    font-size: 70%;
-    margin-bottom: 3em;
-    }
-    .notam {
-    margin-top: 0.5em;
-    margin-bottom: 2.5em
-    }
-    .new-notam {
-    margin-left: -1em;
-    padding-left: 1em;
-    border-left: 2px solid red;
-    }
-
-    .notam_content {
-    margin-left: 5%;
-    max-width: 30em;
-    }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106550520-1"></script>
