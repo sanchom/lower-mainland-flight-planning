@@ -29,10 +29,31 @@ td, th {
 th {
     border-bottom: 1px solid;
 }
-.gfa-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+div.gfa {
+    width: 680px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.gfa {
+    width: 100%;
+}
+.gfa-toggles {
+    text-align: center;
+    clear: both;
+    font-size:2.0rem;
+}
+.gfa-toggle {
+    display: none;
+}
+.gfa-toggle + .gfa {
+    display: none;
+}
+.gfa-toggle:checked + .gfa {
+    display: block;
+}
+label {
+    cursor: pointer;
 }
 img {
     margin-top: 0.5em;

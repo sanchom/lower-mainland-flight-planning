@@ -2,6 +2,7 @@
 
 <html>
   <head>
+    <meta charset="UTF-8">
     <meta name="google-site-verification" content="7IP0_xtDCyu3DT0l7UCNPRZ6Uga0jK8R_UUiGZqqp4M" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lower Mainland Flight Planning Info</title>
@@ -21,13 +22,25 @@
   <body>
     <div class="header"><p><a href="#disclaimer">Disclaimer</a></p></div>
     <div class="gfa-container">
+      <input type="radio" name="gfa-group" id="gfa-1" class="gfa-toggle" checked />
+      <div class="gfa">
       <a href="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_000.png" target="blank_">
 	<img class="gfa" src="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_000.png" /></a>
+      </div>
+      <input type="radio" name="gfa-group" id="gfa-2" class="gfa-toggle" />
+      <div class="gfa">
       <a href="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_006.png" target="blank_">
 	<img class="gfa" src="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_006.png" />
       </a>
+      </div>
+      <input type="radio" name="gfa-group" id="gfa-3" class="gfa-toggle" />
+      <div class="gfa">
       <a href="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_012.png" target="blank_">
 	<img class="gfa" src="https://flightplanning.navcanada.ca/Latest/gfa/anglais/produits/uprair/gfa/gfacn31/Latest-gfacn31_cldwx_012.png" /></a>
+      </div>
+      <div class="gfa-toggles">
+	<label for="gfa-1">⓪</label>&nbsp;&nbsp;<label for="gfa-2">⑥</label>&nbsp;&nbsp;<label for="gfa-3">⑫</label>
+      </div>
     </div>
     {% for station, data in metars_and_tafs.items() %}
     <h1>{{station}}</h1>
