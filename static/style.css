@@ -35,8 +35,13 @@ div.gfa {
     margin-left: auto;
     margin-right: auto;
 }
-img.gfa {
+img.original-gfa {
     width: 100%;
+    display: block;
+}
+img.mobile-gfa {
+    width: 100%;
+    display: none;
 }
 .gfa-toggles {
     text-align: center;
@@ -83,4 +88,9 @@ img {
 .notam_content {
     margin-left: 5%;
     max-width: 30em;
+}
+
+@media all and (max-width: 625px){
+    img.original-gfa {display:none;}
+    img.mobile-gfa {display:block;}
 }
