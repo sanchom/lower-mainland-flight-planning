@@ -14,7 +14,7 @@ app = Flask(__name__, static_url_path='', static_folder='static', template_folde
 @app.route('/custom-gfa/<path:path>')
 def custom_gfa(path):
     expected_size = (758,608)
-    map_box = (0,0,544,608)
+    map_box = (0,0,545,608)
     title_box = (544,0,758,86)
     time_box = (544,92,758,137)
     legend_box = (544,160,758,204)
