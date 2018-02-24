@@ -48,7 +48,7 @@
     <p>{{metar}}</p>
     {% endfor %}
     {% autoescape false %}
-    <p>{{data['TAF']|replace(' FM', '<br />')}}</p>
+    <p>{{data['TAF']|replace(' FM', '<br />FM')}}</p>
     {% endautoescape %}
     {% endfor %}
 
