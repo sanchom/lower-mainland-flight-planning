@@ -42,6 +42,7 @@ img.gfa {
     text-align: center;
     clear: both;
     font-size:2.0rem;
+    color: #757575;
 }
 .gfa-toggle {
     display: none;
