@@ -45,7 +45,7 @@
 	</a>
       </div>
       <div class="gfa-toggles">
-	<label for="gfa-1">⓪</label>&nbsp;&nbsp;<label for="gfa-2">⑥</label>&nbsp;&nbsp;<label for="gfa-3">⑫</label>
+	<label class="toggle-label" for="gfa-1">+0h</label>&nbsp;&nbsp;<label class="toggle-label" for="gfa-2">+6h</label>&nbsp;&nbsp;<label class="toggle-label" for="gfa-3">+12h</label>
       </div>
     </div>
     {% for station, data in metars_and_tafs.items() %}
@@ -54,7 +54,7 @@
     <p>{{metar}}</p>
     {% endfor %}
     {% autoescape false %}
-    <p>{{data['TAF']|replace(' FM', '<br />FM')}}</p>
+    <p>{{data['TAF']|replace(' FM', '<br />FM')|replace(' TEMPO', ' <wbr />TEMPO')|replace(' BCMG',' <wbr />BCMG')|replace(' PROB', ' <wbr />PROB')}}</p>
     {% endautoescape %}
     {% endfor %}
 

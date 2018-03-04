@@ -46,8 +46,6 @@ img.mobile-gfa {
 .gfa-toggles {
     text-align: center;
     clear: both;
-    font-size:2.0rem;
-    color: #757575;
 }
 .gfa-toggle {
     display: none;
@@ -58,8 +56,10 @@ img.mobile-gfa {
 .gfa-toggle:checked + .gfa {
     display: block;
 }
-label {
+.toggle-label {
     cursor: pointer;
+    font-size: 1.5rem;
+    color: #757575;
 }
 img {
     margin-top: 0.5em;
