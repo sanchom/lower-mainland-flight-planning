@@ -10,14 +10,12 @@ issue](https://github.com/sanchom/lower-mainland-flight-planning/issues).
 
 # Setup for local development
 
-* [Install heroku command line interface](https://devcenter.heroku.com/articles/getting-started-with-python#set-up)
-* Install `python-pip` and `python3-pip` packages
-* `pip install Flask`
-* `pip3 install Flask`
-* `pip install gunicorn`
-* `pip3 install gunicorn`
+* [Install heroku command line interface](https://devcenter.heroku.com/articles/getting-started-with-python#set-up
 * `git clone git@github.com:sanchom/lower-mainland-flight-planning.git`
 * `cd lower-mainland-flight-planning`
+* Install `python-pip` and `python3-pip` packages
+* `pip install -r requirements.txt`
+* `pip3 install -r requirements.txt`
 * `heroku local web`
 
 You should see something like this:
