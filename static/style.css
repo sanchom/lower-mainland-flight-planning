@@ -93,4 +93,5 @@ img {
 @media all and (max-width: 625px){
     img.original-gfa {display:none;}
     img.mobile-gfa {display:block;}
+    div.gfa-container {width:100vw; margin-left:-12.5%;}
 }
