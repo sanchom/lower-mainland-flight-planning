@@ -72,15 +72,14 @@
 
     <h1>NOTAMs</h1>
     <div class="notam new-notam">
-      <p class="notam_station">Ten newest NOTAMs per file ({{notam_stations|join(',')}}) are highlighted.</p>
+      <p class="notam_station"><a href="https://plan.navcanada.ca/notices/#56">On
+      October 10, 2019, NAV CANADA changed to the ICAO NOTAM
+      format</a>. They are now available only through Collaborative
+      Flight Planning Services (CFPS)
+      (<a href="https://plan.navcanada.ca/wxrecall/">plan.navcanada.ca</a>). I'm
+      working to update this site to pull in the relevant NOTAMs in
+      the new format.
     </div>
-    {% for notam in notams %}
-    <div class="notam {% if notam.highlight %}new-notam{% endif %}">
-      <p class="notam_station">{{notam.station_line}}</p>
-      <p class="notam_content">{{notam.content}}</p>
-    </div>
-    {% endfor %}
-
 
     <div class="footer"><a name="disclaimer" /><p>This page is just an
     attempt to reproduce a selection of flight planning information
